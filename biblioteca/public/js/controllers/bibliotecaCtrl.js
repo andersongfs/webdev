@@ -1,13 +1,18 @@
-app.controller('bibliotecaCtrl', function($scope) {
-
+app.controller('bibliotecaCtrl', function($scope, $firebaseObject) {
+    var ref = new Firebase("https://bibliotecap3.firebaseio.com");
+    // download the data into a local object
+    $scope.data = $firebaseObject(ref);
+    
     $scope.header = 'Biblioteca de p3';
 
     $scope.books = [{
+        id: 0,
         title: 'Senhor dos anéis',
-        desc: 'Description of Senhor dos anéis',
+        desc: 'Descrição',
         img_url: 'url',
-        authors: ['author1'],
-        price: 10.00
+        authors: ['J. R. R. Tolkien'],
+        price: 10.00,
+        comments: ['Comentário']
     }];
 
     $scope.addBook = function(book) {

@@ -1,0 +1,9 @@
+{
+  "firebase": "bibliotecap3",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
