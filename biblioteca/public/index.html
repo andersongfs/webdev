@@ -28,6 +28,7 @@
                 <th> Descrição</th>
                 <th> Autores</th>
                 <th> Preço</th>
+                <th> Comentários</th>
             </tr>
             <tr ng-repeat='book in books'>
                 <td>
@@ -36,12 +37,18 @@
                 <td>{{book.title }}</td>
                 <td>{{book.desc }}</td>
                 <td>
-                    <p style="font-size: 14px;" ng-repeat="author in book.authors">
+                    <p style="font-size: 12px;" ng-repeat="author in book.authors">
                         {{author}} 
                     </p>
 
                 </td>
                 <td>{{book.price | currency}}</td>
+                <td>
+                    <p style="font-size: 12px;" ng-repeat="comment in book.comments">
+                        {{comment}} 
+                    </p>
+
+                </td>
             </tr>
         </table>
         <hr/>

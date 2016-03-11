@@ -12,7 +12,7 @@ app.controller('bibliotecaCtrl', function($scope, $firebaseObject) {
         img_url: 'url',
         authors: ['J. R. R. Tolkien'],
         price: 10.00,
-        comments: ['Comentário']
+        comments: ['Comentário 1']
     }];
 
     $scope.addBook = function(book) {
